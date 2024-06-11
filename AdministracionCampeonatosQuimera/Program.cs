@@ -1,5 +1,14 @@
+using AdministracionCampeonatosQuimera.Contexto;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
+//Add Conecction string
+builder.Services.AddDbContext<MyContext>(options =>
+{
+    options.UseSqlite(builder.Configuration.GetConnectionString("CadenaConexion"));
+});
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -12,6 +21,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

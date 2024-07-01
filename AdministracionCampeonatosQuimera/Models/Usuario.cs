@@ -10,8 +10,11 @@ namespace AdministracionCampeonatosQuimera.Models
         public int Id { get; set; }
 
         //generalmente un string va con ? para que la variable pueda tener valor o no 
+        [Required, MinLength(5)]
         public string? Email { get; set; }
+        [Required, MinLength(5)]
         public string? Nombre { get; set; }
+        [Required, MinLength(3)]
         public string? Password { get; set; }
         public RolEnum Rol { get; set; }
 

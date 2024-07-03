@@ -1,0 +1,77 @@
+/** styles.css
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el fondo */
+body {
+    background-image: url('image/imagen.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del formulario de login 
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo del formulario 
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título 
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo para cada grupo de formulario 
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo para las etiquetas 
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Estilo para los inputs 
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Estilo para el botón 
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover del botón 
+button:hover {
+    background-color: #0056b3;*/
+}

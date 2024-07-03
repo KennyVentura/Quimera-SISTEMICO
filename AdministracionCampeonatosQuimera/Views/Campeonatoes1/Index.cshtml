@@ -1,0 +1,66 @@
+﻿@model IEnumerable<AdministracionCampeonatosQuimera.Models.Campeonato>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Campeonatos</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CantEquipos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CostoInscripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disciplina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRealizacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modalidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th></th>
+        </tr>
+        <link href="~/css/styles2.css" rel="stylesheet" />
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantEquipos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostoInscripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disciplina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRealizacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modalidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AdministracionCampeonatosQuimera.Models.Equipo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Equipos</h1>
+
+<p>
+   
+    <a asp-action="Create" class="btn btn-primary">Agregar Nuevo </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CelularCapitan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCapitan)
+            </th>
+            <th></th>
+        </tr>
+        <link href="~/css/styles2.css" rel="stylesheet" />
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CelularCapitan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCapitan)
+            </td>
+                <td>
+                    <!-- Botón para Editar -->
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Editar</a>
+                    <!-- Botón para Detalles -->
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Detalles</a>
+                    <!-- Botón para Eliminar -->
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+
+        </tr>
+}
+    </tbody>
+</table>

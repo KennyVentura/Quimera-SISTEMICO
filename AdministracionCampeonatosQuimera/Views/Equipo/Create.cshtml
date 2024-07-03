@@ -1,0 +1,44 @@
+﻿@model AdministracionCampeonatosQuimera.Models.Equipo
+
+@{
+    ViewData["Title"] = "Crear equipo";
+}
+
+<h1>Crear</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label">Nombre de equipo</label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreCapitan" class="control-label">Nombre de Capitan</label>
+                <input asp-for="NombreCapitan" class="form-control" />
+                <span asp-validation-for="NombreCapitan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CelularCapitan" class="control-label">Celular de Capitan</label>
+                <input asp-for="CelularCapitan" class="form-control" />
+                <span asp-validation-for="CelularCapitan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

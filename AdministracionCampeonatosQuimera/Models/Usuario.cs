@@ -1,0 +1,22 @@
+﻿using AdministracionCampeonatosQuimera.Dto;
+using System.ComponentModel.DataAnnotations;
+
+namespace AdministracionCampeonatosQuimera.Models
+{
+    public class Usuario
+    {
+        //todas las clases tendran un key de autenticacion, es decir un "Id"
+        [Key] //Annotation
+        public int Id { get; set; }
+
+        //generalmente un string va con ? para que la variable pueda tener valor o no 
+        public string? Email { get; set; }
+        public string? Nombre { get; set; }
+        public string? Password { get; set; }
+        public RolEnum Rol { get; set; }
+
+        //relaciones 1 ------> *
+        public virtual List<Certificado>? Certificados { get; set; }
+
+    }
+}

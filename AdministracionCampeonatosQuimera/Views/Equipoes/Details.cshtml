@@ -1,0 +1,57 @@
+﻿@model AdministracionCampeonatosQuimera.Models.Equipo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Equipo</h4>
+    <hr />
+    <div class="row">
+        <div class="col-4 col-sm-4">
+            @if (Model.UrlFoto != null)
+            {
+                <img src="~/fotos/@Model.UrlFoto" class="img-thumbnail" style="width: 180px; margin-bottom: 20px;" />
+            }
+        </div>
+        <div class="col-8 col-sm-8">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.CelularCapitan)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.CelularCapitan)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.NombreCapitan)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.NombreCapitan)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.UrlFoto)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.UrlFoto)
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top: 20px;">
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<head>
+    <link href="~/css/styles2.css" rel="stylesheet" />
+</head>

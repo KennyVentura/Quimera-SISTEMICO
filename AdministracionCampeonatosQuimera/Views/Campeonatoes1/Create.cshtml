@@ -1,0 +1,58 @@
+﻿@model AdministracionCampeonatosQuimera.Models.Campeonato
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Crear</h1>
+
+<h4>Campeonato</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CantEquipos" class="control-label"></label>
+                <input asp-for="CantEquipos" class="form-control" />
+                <span asp-validation-for="CantEquipos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CostoInscripcion" class="control-label"></label>
+                <input asp-for="CostoInscripcion" class="form-control" />
+                <span asp-validation-for="CostoInscripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Disciplina" class="control-label"></label>
+                <input asp-for="Disciplina" class="form-control" />
+                <span asp-validation-for="Disciplina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaRealizacion" class="control-label"></label>
+                <input asp-for="FechaRealizacion" class="form-control" />
+                <span asp-validation-for="FechaRealizacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modalidad" class="control-label"></label>
+                <input asp-for="Modalidad" class="form-control" />
+                <span asp-validation-for="Modalidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<head>
+    <link href="~/css/styles2.css" rel="stylesheet" />
+</head>
+

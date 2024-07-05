@@ -1,0 +1,97 @@
+﻿@model IEnumerable<AdministracionCampeonatosQuimera.Models.Campeonato>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Campeonatos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CantEquipos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CostoInscripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disciplina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRealizacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modalidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th></th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CantEquipos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CostoInscripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Disciplina)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaRealizacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modalidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Editar</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Detalles</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+/* Estilos generales para la tabla */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+/* Ajustes para pantallas pequeñas */
+
+</style>

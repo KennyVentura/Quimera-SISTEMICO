@@ -1,0 +1,81 @@
+body {
+ 
+    background-image: url('fut.png');
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el cuerpo tenga la altura completa de la ventana */
+    margin: 0;
+    color: white;
+}
+
+/* Estilos adicionales para el contenedor del login */
+.login-wrapper {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+    background-color: rgba(30, 94, 158, 0.9); /* Fondo semi-transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-container {
+    width: 100%;
+}
+
+    .login-container h2 {
+        margin-bottom: 20px;
+    }
+
+.form-control {
+    background-color: #0C3B70;
+    color: white;
+    border: 1px solid #1E5E9E;
+}
+
+    .form-control::placeholder {
+        color: #A0A0A0;
+    }
+
+.btn-primary {
+    background-color: #4B9CD3;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #357ABD;
+    }
+
+/* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .login-wrapper {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-wrapper {
+        padding: 5px;
+        max-width: 100%;
+    }
+
+    .login-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary {
+        font-size: 0.8rem;
+    }
+}

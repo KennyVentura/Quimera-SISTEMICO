@@ -1,0 +1,24 @@
+/* style.css */
+
+/* Establecer el fondo de la ventana */
+body {
+    
+    background-image: url('sport.png');
+    background-size: cover; /* Ajusta la imagen para que cubra toda la ventana */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Hace que la imagen de fondo se mantenga fija al hacer scroll */
+    background-position: center; /* Centra la imagen de fondo */
+    margin: 0; /* Elimina márgenes predeterminados */
+    height: 100vh; /* Asegura que el body tenga al menos la altura completa de la ventana */
+    font-family: Arial, sans-serif; /* Fuente predeterminada para el texto */
+}
+
+/* Opcional: Estilo de contenedores */
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin: 20px auto; /* Espaciado automático */
+    max-width: 800px; /* Ancho máximo del contenedor */
+}
